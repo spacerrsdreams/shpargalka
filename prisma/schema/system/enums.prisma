@@ -1,0 +1,11 @@
+enum Role {
+  Admin
+  Moderator
+  User
+}
+
+enum RestrictionStatus {
+  None
+  Restricted
+  Banned
+}
