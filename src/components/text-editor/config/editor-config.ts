@@ -10,8 +10,8 @@ import { StarterKit } from "@tiptap/starter-kit";
 import { type SuggestionProps } from "@tiptap/suggestion";
 import tippy, { type Instance as TippyInstance } from "tippy.js";
 
-import { SlashCommand } from "@/components/editor/config/slash-menu/slash-command-config";
-import { SlashMenu } from "@/components/editor/slash-menu";
+import { SlashCommand } from "@/components/text-editor/config/slash-menu/slash-command-config";
+import { SlashMenu } from "@/components/text-editor/slash-menu";
 
 export const EditorConfig: UseEditorOptions & {
   immediatelyRender: false;
@@ -44,7 +44,7 @@ export const EditorConfig: UseEditorOptions & {
     TextStyle,
     TextAlign.configure({ types: ["heading", "paragraph"] }),
     Placeholder.configure({
-      placeholder: "What moment from the past will you bring to light today?",
+      placeholder: "Start typing here...",
     }),
     Link.configure({
       HTMLAttributes: {

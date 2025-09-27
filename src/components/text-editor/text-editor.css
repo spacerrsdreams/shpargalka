@@ -1,6 +1,10 @@
+.ProseMirror {
+  color: var(--foreground);
+}
+
 .ProseMirror p.is-editor-empty:first-child::before {
   content: attr(data-placeholder);
-  color: var(--color-muted-foreground);
+  color: var(--color-muted);
   pointer-events: none;
   float: left;
   height: 0;
@@ -11,7 +15,7 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--color-foreground);
+  color: var(--foreground);
 }
 
 .ProseMirror > p:not(:first-child) {

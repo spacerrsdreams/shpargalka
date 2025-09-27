@@ -24,8 +24,8 @@ export const FloatingMenu = ({ editor }: { editor: Editor }) => {
       }}
     >
       <div className="flex gap-7">
-        <Button variant="outline" onClick={() => setOpen(!open)} className="-ml-20 rounded-full shadow-sm" size="icon">
-          <PlusIcon className={cn("size-4 transition-transform duration-200 ease-in-out", open && "rotate-45")} />
+        <Button variant="ghost" onClick={() => setOpen(!open)} className="-ml-16 !p-1 shadow" size="icon">
+          <PlusIcon className={cn("size-4 transition-transform duration-200 ease-in-out", open && "hidden")} />
         </Button>
 
         <AnimatePresence>

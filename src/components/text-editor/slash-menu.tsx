@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from "react";
 
-import { slashMenuItems, type MenuItem } from "@/components/editor/config/slash-menu/slash-menu-items";
+import { slashMenuItems, type MenuItem } from "@/components/text-editor/config/slash-menu/slash-menu-items";
 import { Button } from "@/components/ui/button";
 
 interface SlashMenuProps {

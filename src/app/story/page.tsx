@@ -1,4 +1,4 @@
-import { TextEditor } from "@/components/editor/editor";
+import { TextEditor } from "@/components/text-editor/text-editor";
 
 export default function StoryPage() {
   return (

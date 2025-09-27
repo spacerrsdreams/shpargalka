@@ -34,7 +34,7 @@ export const NavProjects = ({
       <SidebarMenu>
         {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
-            <SidebarMenuButton asChild>
+            <SidebarMenuButton asChild className="transition-colors duration-200">
               <a href={item.url}>
                 <item.icon />
                 <span>{item.name}</span>
