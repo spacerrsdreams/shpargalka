@@ -2,7 +2,7 @@
 "use client";
 
 import type { ChatStatus, FileUIPart } from "ai";
-import { ImageIcon, Loader2Icon, PaperclipIcon, PlusIcon, SendIcon, SquareIcon, XIcon } from "lucide-react";
+import { ImageIcon, Loader2Icon, PaperclipIcon, SendIcon, SquareIcon, XIcon } from "lucide-react";
 import { nanoid } from "nanoid";
 import {
   Children,
@@ -26,12 +26,7 @@ import {
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -509,13 +504,22 @@ export type PromptInputActionMenuProps = ComponentProps<typeof DropdownMenu>;
 export const PromptInputActionMenu = (props: PromptInputActionMenuProps) => <DropdownMenu {...props} />;
 
 export type PromptInputActionMenuTriggerProps = ComponentProps<typeof Button> & {};
-export const PromptInputActionMenuTrigger = ({ className, children, ...props }: PromptInputActionMenuTriggerProps) => (
-  <DropdownMenuTrigger asChild>
-    <PromptInputButton className={className} {...props}>
-      {children ?? <PlusIcon className="size-4" />}
+export const PromptInputActionMenuTrigger = ({ className, children, ...props }: PromptInputActionMenuTriggerProps) => {
+  const attachments = usePromptInputAttachments();
+
+  return (
+    <PromptInputButton
+      className={className}
+      {...props}
+      onClick={(e) => {
+        e.preventDefault();
+        attachments.openFileDialog();
+      }}
+    >
+      {children ?? <PaperclipIcon className="size-4" />}
     </PromptInputButton>
-  </DropdownMenuTrigger>
-);
+  );
+};
 
 export type PromptInputActionMenuContentProps = ComponentProps<typeof DropdownMenuContent>;
 export const PromptInputActionMenuContent = ({ className, ...props }: PromptInputActionMenuContentProps) => (
@@ -565,13 +569,18 @@ export const PromptInputModelSelect = (props: PromptInputModelSelectProps) => <S
 
 export type PromptInputModelSelectTriggerProps = ComponentProps<typeof SelectTrigger>;
 
-export const PromptInputModelSelectTrigger = ({ className, ...props }: PromptInputModelSelectTriggerProps) => (
+export const PromptInputModelSelectTrigger = ({
+  className,
+  hideIcon = false,
+  ...props
+}: PromptInputModelSelectTriggerProps & { hideIcon?: boolean }) => (
   <SelectTrigger
     className={cn(
       "text-muted-foreground border-none bg-transparent font-medium shadow-none transition-colors",
       'hover:bg-accent hover:text-foreground [&[aria-expanded="true"]]:bg-accent [&[aria-expanded="true"]]:text-foreground',
       className,
     )}
+    hideIcon={hideIcon}
     {...props}
   />
 );

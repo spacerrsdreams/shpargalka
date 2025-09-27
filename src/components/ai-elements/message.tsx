@@ -12,7 +12,7 @@ export type MessageProps = HTMLAttributes<HTMLDivElement> & {
 export const Message = ({ className, from, ...props }: MessageProps) => (
   <div
     className={cn(
-      "group flex w-full items-end justify-end gap-2 py-4",
+      "group flex w-full items-end justify-end gap-2 py-2 pb-0",
       from === "user" ? "is-user" : "is-assistant flex-row-reverse justify-end",
       className,
     )}
@@ -24,12 +24,12 @@ const messageContentVariants = cva("is-user:dark flex flex-col gap-2 overflow-hi
   variants: {
     variant: {
       contained: [
-        "max-w-[80%] px-4 py-3",
+        "max-w-[90%] px-4 py-3",
         "group-[.is-user]:bg-secondary rounded-lg group-[.is-user]:text-foreground",
         "group-[.is-assistant]:text-foreground",
       ],
       flat: [
-        "group-[.is-user]:max-w-[80%] group-[.is-user]:bg-secondary group-[.is-user]:px-4 group-[.is-user]:py-3 group-[.is-user]:text-foreground",
+        "group-[.is-user]:max-w-[90%] group-[.is-user]:bg-secondary group-[.is-user]:px-4 group-[.is-user]:py-3 group-[.is-user]:text-foreground",
         "group-[.is-assistant]:text-foreground",
       ],
     },
@@ -55,6 +55,6 @@ export type MessageAvatarProps = ComponentProps<typeof Avatar> & {
 export const MessageAvatar = ({ src, name, className, ...props }: MessageAvatarProps) => (
   <Avatar className={cn("ring-border size-8 ring-1", className)} {...props}>
     <AvatarImage alt="" className="mt-0 mb-0" src={src} />
-    <AvatarFallback>{name?.slice(0, 2) || "ME"}</AvatarFallback>
+    <AvatarFallback>{name?.slice(0, 2) ?? "ME"}</AvatarFallback>
   </Avatar>
 );

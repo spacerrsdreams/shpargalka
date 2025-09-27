@@ -84,6 +84,7 @@
     "react-syntax-highlighter": "^15.6.6",
     "recharts": "^2.15.4",
     "retry": "^0.13.1",
+    "shiki": "^3.13.0",
     "sonner": "^2.0.7",
     "state": "link:@tiptap/pm/state",
     "streamdown": "^1.3.0",

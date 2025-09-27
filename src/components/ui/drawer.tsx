@@ -42,8 +42,8 @@ function DrawerContent({ className, children, ...props }: React.ComponentProps<t
         "group/drawer-content bg-background relative z-50 flex h-screen flex-col",
         "data-[vaul-drawer-direction=top]:mb-4 data-[vaul-drawer-direction=top]:h-screen data-[vaul-drawer-direction=top]:w-full data-[vaul-drawer-direction=top]:rounded-b-lg data-[vaul-drawer-direction=top]:border-b",
         "data-[vaul-drawer-direction=bottom]:mt-4 data-[vaul-drawer-direction=bottom]:h-screen data-[vaul-drawer-direction=bottom]:w-full data-[vaul-drawer-direction=bottom]:rounded-t-lg data-[vaul-drawer-direction=bottom]:border-t",
-        "data-[vaul-drawer-direction=right]:h-screen data-[vaul-drawer-direction=right]:w-3/4 data-[vaul-drawer-direction=right]:border-l data-[vaul-drawer-direction=right]:sm:max-w-sm",
-        "data-[vaul-drawer-direction=left]:h-screen data-[vaul-drawer-direction=left]:w-3/4 data-[vaul-drawer-direction=left]:border-r data-[vaul-drawer-direction=left]:sm:max-w-sm",
+        "data-[vaul-drawer-direction=right]:h-screen data-[vaul-drawer-direction=right]:w-3/4 data-[vaul-drawer-direction=right]:border-l data-[vaul-drawer-direction=right]:sm:max-w-md",
+        "data-[vaul-drawer-direction=left]:h-screen data-[vaul-drawer-direction=left]:w-3/4 data-[vaul-drawer-direction=left]:border-r data-[vaul-drawer-direction=left]:sm:max-w-md",
         className,
       )}
       {...props}
