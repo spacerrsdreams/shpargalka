@@ -27,8 +27,8 @@ const crimsonPro = Crimson_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "Didgori",
-  description: "Didgori App",
+  title: "Shpargalka",
+  description: "Shpargalka App",
 };
 
 export default function RootLayout({
