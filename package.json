@@ -11,6 +11,7 @@
     "ngrok": "node scripts/ngrok.js"
   },
   "dependencies": {
+    "@ai-sdk/react": "^2.0.56",
     "@clerk/nextjs": "^6.32.0",
     "@hookform/resolvers": "^5.2.2",
     "@neondatabase/serverless": "^1.0.1",

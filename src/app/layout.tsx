@@ -5,6 +5,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import "@/app/globals.css";
 
 import { AppProvider } from "@/providers/app-provider";
+import { AiChatDrawer } from "@/components/ai-chat-drawer/ai-chat-drawer";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import { SidebarInset } from "@/components/sidebar/sidebar-inset";
 import { Toaster } from "@/components/ui/sonner";
@@ -27,6 +28,7 @@ export default function RootLayout({
             <SidebarProvider>
               <AppSidebar />
               <SidebarInset>{children}</SidebarInset>
+              <AiChatDrawer />
             </SidebarProvider>
             <Toaster />
           </main>

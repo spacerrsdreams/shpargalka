@@ -17,8 +17,8 @@ export const TextEditor = () => {
     <div className="mt-20 w-full py-4">
       <BubbleMenu editor={editor} />
       <FloatingMenu editor={editor} />
-      <div className="mx-auto w-[712px]">
-        <EditorContent editor={editor} className="h-full w-full font-sans focus:outline-none" />
+      <div className="flex items-center justify-center">
+        <EditorContent editor={editor} className="h-full w-[712px] font-sans focus:outline-none" />
       </div>
     </div>
   );
